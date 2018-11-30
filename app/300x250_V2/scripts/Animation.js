@@ -7,11 +7,14 @@ app.Animation = (function () {
     var tl1 = new TimelineMax();
     var tl2 = new TimelineMax();
 
-    var bg1 = document.getElementById('bg1');
-    var bg2 = document.getElementById('bg2');
-    var bg3 = document.getElementById('bg3');
-    var bg4 = document.getElementById('bg4');
-    var bg5 = document.getElementById('bg5');
+    // var bg1 = document.getElementById('bg1');
+    // var bg2 = document.getElementById('bg2');
+    // var bg3 = document.getElementById('bg3');
+    // var bg4 = document.getElementById('bg4');
+    // var bg5 = document.getElementById('bg5');
+
+    var shape1 = document.getElementById('shape1');
+    var shape2 = document.getElementById('shape2');
 
     var txt1 = document.getElementById('txt1');
     var txt2a = document.getElementById('txt2a');
@@ -34,6 +37,9 @@ app.Animation = (function () {
         t.set(txt2a, {transformOrigin: "30% 80%"});
         t.set(txt2b, {transformOrigin: "50% 80%"});
 
+        t.set(shape1, {transformOrigin: "50% 0%"});
+        t.set(shape2, {transformOrigin: "50% 0%"});
+
         buttonExit.addEventListener('mouseover', function () {
             t.to(cta, .1, {backgroundColor: "rgba(242, 104, 39, .8)"});
         });
@@ -46,10 +52,13 @@ app.Animation = (function () {
     // --------------------------------------------------------------------------------------
     // Starts the animation
     function start() {
-        tl1.to(bg2, 2, {opacity:1}, "+=1")
-            .to(bg3, 2, {opacity:1})
-            .to(bg4, 2, {opacity:1})
-            .to(bg5, 2, {opacity:1});
+        tl1.to(shape1, 6, {scale:2, ease: Cubic.easeInOut}, "+=.5")
+            .to(shape2, 6, {scale:2, ease: Cubic.easeInOut}, "-=6")
+
+            .to(shape1, 1, {opacity:0}, "-=3")
+            .to(shape2, 1, {opacity:0}, "-=3");
+
+
 
         tl2.to(txt1, 1, {opacity:1}, "+=.5")
             .to(txt2a, 1, {opacity:1})
