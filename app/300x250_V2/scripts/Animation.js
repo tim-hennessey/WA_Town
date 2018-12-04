@@ -7,14 +7,12 @@ app.Animation = (function () {
     var tl1 = new TimelineMax();
     var tl2 = new TimelineMax();
 
-    // var bg1 = document.getElementById('bg1');
-    // var bg2 = document.getElementById('bg2');
-    // var bg3 = document.getElementById('bg3');
-    // var bg4 = document.getElementById('bg4');
-    // var bg5 = document.getElementById('bg5');
 
     var shape1 = document.getElementById('shape1');
     var shape2 = document.getElementById('shape2');
+    var shape3 = document.getElementById('shape3');
+    var shape4 = document.getElementById('shape4');
+    var shape = document.getElementsByClassName('shape');
 
     var txt1 = document.getElementById('txt1');
     var txt2a = document.getElementById('txt2a');
@@ -37,8 +35,10 @@ app.Animation = (function () {
         t.set(txt2a, {transformOrigin: "30% 80%"});
         t.set(txt2b, {transformOrigin: "50% 80%"});
 
-        t.set(shape1, {transformOrigin: "50% 0%"});
-        t.set(shape2, {transformOrigin: "50% 0%"});
+        t.set(shape1, {scale:1, x:-50, y:-50, svgOrigin: "50% 50%"});
+        t.set(shape2, {scale:.4, x:-185, y:-175, svgOrigin: "50% 50%"});
+        t.set(shape3, {scale:.4, x:-110, y:-100, svgOrigin: "50% 50%"});
+        t.set(shape4, {scale:.4, x:-190, y:-160, svgOrigin: "50% 50%"});
 
         buttonExit.addEventListener('mouseover', function () {
             t.to(cta, .1, {backgroundColor: "rgba(242, 104, 39, .8)"});
@@ -52,18 +52,27 @@ app.Animation = (function () {
     // --------------------------------------------------------------------------------------
     // Starts the animation
     function start() {
-        tl1.to(shape1, 6, {scale:2, ease: Cubic.easeInOut}, "+=.5")
-            .to(shape2, 6, {scale:2, ease: Cubic.easeInOut}, "-=6")
 
-            .to(shape1, 1, {opacity:0}, "-=3")
-            .to(shape2, 1, {opacity:0}, "-=3");
+        tl1.to(shape1, 6, {scale: 1.6, x:-130, y:-43, ease: Cubic.easeIn})
+            // .to(shape1, 2, {autoAlpha: .8}, "-=6")
+            .to(shape1, 2, {autoAlpha: 0}, "-=2")
 
+            .to(shape2, 6, {scale: 1, x:-227, y:145, ease: Cubic.easeIn}, "-=3")
+            .to(shape2, 2, {autoAlpha: .8}, "-=6")
+            .to(shape2, 2, {autoAlpha: 0}, "-=2")
+
+            .to(shape3, 6, {scale: 1, x:-11, y:74, ease: Cubic.easeInOut}, "-=3")
+            .to(shape3, 2, {autoAlpha: .8}, "-=6")
+            // .to(shape3, 2, {autoAlpha: 0}, "-=2")
+
+            .to(shape4, 6, {scale: 1, x:-327, y:-292, ease: Cubic.easeInOut}, "-=3")
+            .to(shape4, 2, {autoAlpha: .8}, "-=6");
+            // .to(shape4, 2, {autoAlpha: 0}, "-=2");
 
 
         tl2.to(txt1, 1, {opacity:1}, "+=.5")
             .to(txt2a, 1, {opacity:1})
             .from(txt2a, 2, {scale:.2, ease: Cubic.easeIn}, "-=1")
-
 
             .from(txt2a, 1, {x: "+=60", ease: Cubic.easeInOut}, "+=1")
             .to(txt2b, 1, {opacity: 1}, "-=.5")
