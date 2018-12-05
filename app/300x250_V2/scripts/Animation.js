@@ -32,13 +32,15 @@ app.Animation = (function () {
     // set default properties
     function initialize() {
         t.set(banner, {opacity: 1});
-        t.set(txt2a, {transformOrigin: "30% 80%"});
-        t.set(txt2b, {transformOrigin: "50% 80%"});
+        t.set(txt1, {scale:.5, transformOrigin: "50% 100%"});
+        t.set(txt2a, {scale:.5, transformOrigin: "30% 100%"});
+        t.set(txt2b, {scale:.5, transformOrigin: "50% 100%"});
+        t.set(cta, {scale:.75, transformOrigin: "50% 50%"});
 
-        t.set(shape1, {scale:1, x:-50, y:-50, svgOrigin: "50% 50%"});
-        t.set(shape2, {scale:.4, x:-185, y:-175, svgOrigin: "50% 50%"});
-        t.set(shape3, {scale:.4, x:-110, y:-100, svgOrigin: "50% 50%"});
-        t.set(shape4, {scale:.4, x:-190, y:-160, svgOrigin: "50% 50%"});
+        t.set(shape1, {x:-50, y:-50, svgOrigin: "50% 50%"});
+        t.set(shape2, {scale:.7, x:-50, y:-175, svgOrigin: "50% 50%"});
+        t.set(shape3, {x:-110, y:-150, svgOrigin: "50% 50%"});
+        t.set(shape4, {x:-300, y:-160, svgOrigin: "50% 50%"});
 
         buttonExit.addEventListener('mouseover', function () {
             t.to(cta, .1, {backgroundColor: "rgba(242, 104, 39, .8)"});
@@ -53,36 +55,31 @@ app.Animation = (function () {
     // Starts the animation
     function start() {
 
-        tl1.to(shape1, 6, {scale: 1.6, x:-130, y:-43, ease: Cubic.easeIn})
-            // .to(shape1, 2, {autoAlpha: .8}, "-=6")
-            .to(shape1, 2, {autoAlpha: 0}, "-=2")
+        tl1.to(shape1, 6, {x:-130, y:-43, ease: Cubic.easeInOut})
+            .to(shape1, 1.5, {autoAlpha: 0}, "-=1.5")
 
-            .to(shape2, 6, {scale: 1, x:-227, y:145, ease: Cubic.easeIn}, "-=3")
-            .to(shape2, 2, {autoAlpha: .8}, "-=6")
-            .to(shape2, 2, {autoAlpha: 0}, "-=2")
+            .to(shape2, 6, {x:20, y:-200, ease: Cubic.easeInOut}, "-=5")
+            .to(shape2, 1.5, {autoAlpha: 1}, "-=6")
+            .to(shape2, 1.5, {autoAlpha: 0}, "-=1.5")
 
-            .to(shape3, 6, {scale: 1, x:-11, y:74, ease: Cubic.easeInOut}, "-=3")
-            .to(shape3, 2, {autoAlpha: .8}, "-=6")
-            // .to(shape3, 2, {autoAlpha: 0}, "-=2")
+            .to(shape3, 6, {x:-150, y:-250, ease: Cubic.easeInOut}, "-=5")
+            .to(shape3, 1.5, {autoAlpha: 1}, "-=6")
 
-            .to(shape4, 6, {scale: 1, x:-327, y:-292, ease: Cubic.easeInOut}, "-=3")
-            .to(shape4, 2, {autoAlpha: .8}, "-=6");
-            // .to(shape4, 2, {autoAlpha: 0}, "-=2");
+            .to(shape4, 6, {x:-400, y:50, ease: Cubic.easeInOut}, "-=5")
+            .to(shape4, 1.5, {autoAlpha: .15}, "-=6");
 
 
-        tl2.to(txt1, 1, {opacity:1}, "+=.5")
-            .to(txt2a, 1, {opacity:1})
-            .from(txt2a, 2, {scale:.2, ease: Cubic.easeIn}, "-=1")
+        tl2.to(txt1, 1.5, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.5")
+            .to(txt2a, 1.5, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.5")
 
             .from(txt2a, 1, {x: "+=60", ease: Cubic.easeInOut}, "+=1")
-            .to(txt2b, 1, {opacity: 1}, "-=.5")
-            .from(txt2b, 2, {scale:.2, ease: Cubic.easeIn}, "-=1")
+            .to(txt2b, 1, {scale:1, opacity:1, ease: Cubic.easeInOut}, "-=.75")
 
-            .to(cta, .5, {opacity: 1}, "+=.5")
-            .from(logo1, 1, {y:"+=20", ease: Cubic.easeInOut}, "+=1")
-            .from(logo2a, 1, {y:"+=20", opacity:0, ease: Cubic.easeInOut}, "-=.5")
-            .from(logo2b, 1, {y:"+=20", opacity:0, ease: Cubic.easeInOut}, "-=.5")
-            .from(logo2c, 1, {y:"+=20", opacity:0, ease: Cubic.easeInOut}, "-=.5");
+            .to(cta, .75, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.25")
+            .from(logo1, 1, {y:"+=20", ease: Cubic.easeInOut}, "+=.3")
+            .from(logo2a, .3, {y:"+=20", opacity:0, ease: Cubic.easeInOut})
+            .from(logo2b, .3, {y:"+=20", opacity:0, ease: Cubic.easeInOut})
+            .from(logo2c, .3, {y:"+=20", opacity:0, ease: Cubic.easeInOut});
     }
 
     // --------------------------------------------------------------------------------------
