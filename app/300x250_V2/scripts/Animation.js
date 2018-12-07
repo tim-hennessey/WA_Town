@@ -47,11 +47,11 @@ app.Animation = (function () {
         t.set(shape6, {x:-300, y:-250, svgOrigin: "50% 50%"});
 
         buttonExit.addEventListener('mouseover', function () {
-            t.to(cta, .1, {backgroundColor: "rgba(242, 104, 39, .8)"});
+            t.to(cta, .1, {borderColor:"rgba(255, 255, 255, 1)"});
         });
 
         buttonExit.addEventListener('mouseout', function () {
-            t.to(cta, .25, {backgroundColor: "rgba(242, 104, 39, 1)"});
+            t.to(cta, .25, {borderColor:"rgba(255, 255, 255, 0)"});
         });
     }
 
@@ -78,7 +78,7 @@ app.Animation = (function () {
             .to(shape5, 6, {x:-121, y:-280, ease: Cubic.easeOut}, "-=5")
             .to(shape5, 2, {autoAlpha: 1}, "-=6")
 
-            .to(shape6, 6, {x:-339, y:-292, ease: Cubic.easeOut}, "-=5")
+            .to(shape6, 6, {x:-339, y:-272, ease: Cubic.easeOut}, "-=5")
             .to(shape6, 2, {autoAlpha: 1}, "-=6");
 
 
