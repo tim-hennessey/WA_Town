@@ -16,12 +16,13 @@ body {
     margin-top: -$banner-height / 2;
     opacity: 0;
 
+
     #shape1 {
         left: 0;
         top: 0;
         width: 670.35px;
         height: 544.39px;
-        opacity:.8;
+        opacity:0;
         position: absolute;
     }
 
@@ -45,8 +46,6 @@ body {
         position: absolute;
     }
 
-
-
     #shape4 {
         left: 0;
         top: 0;
@@ -55,6 +54,27 @@ body {
         opacity:0;
         position: absolute;
     }
+
+    #shape5 {
+        left: 0;
+        top: 0;
+        width: 542px;
+        height: 440px;
+        opacity:0;
+        position: absolute;
+    }
+
+    #shape6 {
+        left: 0;
+        top: 0;
+        width: 696px;
+        height: 565px;
+        opacity:0;
+        position: absolute;
+    }
+
+
+
 
 
 

@@ -12,6 +12,8 @@ app.Animation = (function () {
     var shape2 = document.getElementById('shape2');
     var shape3 = document.getElementById('shape3');
     var shape4 = document.getElementById('shape4');
+    var shape5 = document.getElementById('shape5');
+    var shape6 = document.getElementById('shape6');
     var shape = document.getElementsByClassName('shape');
 
     var txt1 = document.getElementById('txt1');
@@ -37,10 +39,12 @@ app.Animation = (function () {
         t.set(txt2b, {scale:.5, transformOrigin: "50% 100%"});
         t.set(cta, {scale:.75, transformOrigin: "50% 50%"});
 
-        t.set(shape1, {x:-50, y:-50, svgOrigin: "50% 50%"});
-        t.set(shape2, {scale:.7, x:-50, y:-175, svgOrigin: "50% 50%"});
-        t.set(shape3, {x:-110, y:-150, svgOrigin: "50% 50%"});
-        t.set(shape4, {x:-300, y:-160, svgOrigin: "50% 50%"});
+        t.set(shape1, {x:-100, y:-86, svgOrigin: "50% 50%"});
+        t.set(shape2, {x:-260, y:160, svgOrigin: "50% 50%"});
+        t.set(shape3, {x:-50, y:150, svgOrigin: "50% 50%"});
+        t.set(shape4, {x:-300, y:-200, svgOrigin: "50% 50%"});
+        t.set(shape5, {x:-160, y:-300, svgOrigin: "50% 50%"});
+        t.set(shape6, {x:-300, y:-250, svgOrigin: "50% 50%"});
 
         buttonExit.addEventListener('mouseover', function () {
             t.to(cta, .1, {backgroundColor: "rgba(242, 104, 39, .8)"});
@@ -55,18 +59,29 @@ app.Animation = (function () {
     // Starts the animation
     function start() {
 
-        tl1.to(shape1, 6, {x:-130, y:-43, ease: Cubic.easeInOut})
-            .to(shape1, 1.5, {autoAlpha: 0}, "-=1.5")
+        tl1.to(shape1, 6, {x:-130, y:-43, ease: Cubic.easeOut})
+            .to(shape1, 2, {autoAlpha: 1}, "-=6")
+            .to(shape1, 2, {autoAlpha: 0}, "-=2")
 
-            .to(shape2, 6, {x:20, y:-200, ease: Cubic.easeInOut}, "-=5")
-            .to(shape2, 1.5, {autoAlpha: 1}, "-=6")
-            .to(shape2, 1.5, {autoAlpha: 0}, "-=1.5")
+            .to(shape2, 6, {x:-227, y:145, ease: Cubic.easeOut}, "-=5")
+            .to(shape2, 2, {autoAlpha: 1}, "-=6")
+            .to(shape2, 2, {autoAlpha: 0}, "-=2")
 
-            .to(shape3, 6, {x:-150, y:-250, ease: Cubic.easeInOut}, "-=5")
-            .to(shape3, 1.5, {autoAlpha: 1}, "-=6")
+            .to(shape3, 6, {x:-11, y:74, ease: Cubic.easeOut}, "-=5")
+            .to(shape3, 2, {autoAlpha: 1}, "-=6")
+            .to(shape3, 2, {autoAlpha: 0}, "-=2")
 
-            .to(shape4, 6, {x:-400, y:50, ease: Cubic.easeInOut}, "-=5")
-            .to(shape4, 1.5, {autoAlpha: .15}, "-=6");
+            .to(shape4, 6, {x:-327, y:-292, ease: Cubic.easeOut}, "-=5")
+            .to(shape4, 2, {autoAlpha: 1}, "-=6")
+            .to(shape4, 2, {autoAlpha: 0}, "-=2")
+
+            .to(shape5, 6, {x:-121, y:-280, ease: Cubic.easeOut}, "-=5")
+            .to(shape5, 2, {autoAlpha: 1}, "-=6")
+
+            .to(shape6, 6, {x:-339, y:-292, ease: Cubic.easeOut}, "-=5")
+            .to(shape6, 2, {autoAlpha: 1}, "-=6");
+
+
 
 
         tl2.to(txt1, 1.5, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.5")
