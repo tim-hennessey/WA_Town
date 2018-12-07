@@ -84,11 +84,11 @@ app.Animation = (function () {
 
 
 
-        tl2.to(txt1, 1.5, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.5")
-            .to(txt2a, 1.5, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.5")
+        tl2.to(txt1, .75, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.5")
+            .to(txt2a, .75, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.5")
 
-            .from(txt2a, 1, {x: "+=60", ease: Cubic.easeInOut}, "+=1")
-            .to(txt2b, 1, {scale:1, opacity:1, ease: Cubic.easeInOut}, "-=.75")
+            .from(txt2a, .65, {x: "+=60", ease: Cubic.easeInOut}, "+=.75")
+            .to(txt2b, .65, {scale:1, opacity:1, ease: Cubic.easeInOut}, "-=.4")
 
             .to(cta, .75, {scale:1, opacity:1, ease: Cubic.easeInOut}, "+=.25")
             .from(logo1, 1, {y:"+=20", ease: Cubic.easeInOut}, "+=.3")
