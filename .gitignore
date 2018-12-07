@@ -3,3 +3,4 @@ dist
 .tmp
 bower_components
 *.xml
+.idea/workspace.xml
