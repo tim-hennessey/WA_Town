@@ -1,0 +1,173 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+#banner {
+    background: #0280c8;
+    position: absolute;
+    overflow: hidden;
+    width: $banner-width;
+    height: $banner-height;
+    left: 50%;
+    top: 50%;
+    margin-left: -$banner-width / 2;
+    margin-top: -$banner-height / 2;
+    opacity: 0;
+
+
+    #shape1 {
+        left: 0;
+        top: 0;
+        width: 670.35px;
+        height: 544.39px;
+        opacity:0;
+        position: absolute;
+    }
+
+
+    #shape2 {
+        left: 0;
+        top: 0;
+        width: 697.17px;
+        height: 566.17px;
+        opacity:0;
+        position: absolute;
+    }
+
+
+    #shape3 {
+        left: 0;
+        top: 0;
+        width: 541.65px;
+        height: 439.87px;
+        opacity:0;
+        position: absolute;
+    }
+
+    #shape4 {
+        left: 0;
+        top: 0;
+        width: 697.17px;
+        height: 566.17px;
+        opacity:0;
+        position: absolute;
+    }
+
+    #shape5 {
+        left: 0;
+        top: 0;
+        width: 542px;
+        height: 440px;
+        opacity:0;
+        position: absolute;
+    }
+
+    #shape6 {
+        left: 0;
+        top: 0;
+        width: 696px;
+        height: 565px;
+        opacity:0;
+        position: absolute;
+    }
+
+
+
+
+
+
+
+    #logo1 {
+        bottom: 0px;
+        left: 0px;
+        transform: translate3d(0, 0, 0.1px);
+        clip: rect(0px, 300px, 51px, 0px);
+        position: absolute;
+    }
+
+    #logo2a {
+        bottom: 0px;
+        left: 0px;
+        transform: translate3d(0, 0, 0.1px);
+        clip: rect(51px, 47px, 85px, 0px);
+        position: absolute;
+    }
+
+    #logo2b {
+        bottom: 0px;
+        left: 0px;
+        transform: translate3d(0, 0, 0.1px);
+        clip: rect(51px, 168px, 85px, 47px);
+        position: absolute;
+    }
+
+    #logo2c {
+        bottom: 0px;
+        left: 0px;
+        transform: translate3d(0, 0, 0.1px);
+        clip: rect(51px, 300px, 85px, 168px);
+        position: absolute;
+    }
+
+    #txt1 {
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        clip: rect(0px, 300px, 209px, 0px);
+        position: absolute;
+    }
+
+    #txt2a {
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        clip: rect(209px, 300px, 257px, 0px);
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #txt2b {
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        clip: rect(257px, 300px, 305px, 0px);
+        position: absolute;
+    }
+
+    #cta {
+        border: 2px solid rgba(255, 255, 255, 0);
+        width: 200px;
+        height: 40px;
+        left: 48px;
+        top: 338px;
+        border-radius: 70px;
+        background-color: rgba(242, 104, 39, 1);
+        opacity: 0;
+        position: absolute;
+    }
+
+    #button-exit {
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+    }
+
+    #border {
+        border: 1px solid #ccc;
+        display: block;
+        width: $banner-width - 2;
+        height: $banner-height - 2;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+    }
+
+}
