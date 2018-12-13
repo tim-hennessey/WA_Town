@@ -105,7 +105,7 @@ body {
 
     #txt2a {
         top: 0px;
-        left: 0px;
+        left: -10px;
         clip: rect(0px, 112px, 50px, 0px);
         transform: translate3d(0, 0, 0.1px);
         position: absolute;
@@ -113,23 +113,23 @@ body {
 
     #txt2b {
         top: 0px;
-        left: 0px;
+        left: -10px;
         clip: rect(0px, 184px, 50px, 112px);
         position: absolute;
     }
 
     #txt2c {
         top: 0px;
-        left: 0px;
+        left: -10px;
         clip: rect(0px, 272px, 50px, 184px);
         position: absolute;
     }
 
     #cta {
         border: 2px solid rgba(255, 255, 255, 0);
-        width: 104px;
+        width: 101px;
         height: 26px;
-        right: 40px;
+        right: 32px;
         top: 10px;
         border-radius: 30px;
         background-color: rgba(242, 104, 39, 1);
@@ -137,7 +137,7 @@ body {
         position: absolute;
 
         #cta_txt {
-            left: -2px;
+            left: -3px;
             top: -2px;
             position: absolute;
         }
