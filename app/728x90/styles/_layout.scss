@@ -16,68 +16,68 @@ body {
     margin-top: -$banner-height / 2;
     opacity: 0;
 
-
-    #shape1 {
+    #shapes {
         left: 0;
         top: 0;
-        width: 670.35px;
-        height: 544.39px;
-        opacity:0;
+        width: $banner-width - 1;
+        height: $banner-height - 1;
         position: absolute;
+        overflow: hidden;
+
+        #shape1 {
+            left: 0;
+            top: 0;
+            width: 670.35px;
+            height: 544.39px;
+            opacity: 0;
+            position: absolute;
+        }
+
+        #shape2 {
+            left: 0;
+            top: 0;
+            width: 697.17px;
+            height: 566.17px;
+            opacity: 0;
+            position: absolute;
+        }
+
+        #shape3 {
+            left: 0;
+            top: 0;
+            width: 541.65px;
+            height: 439.87px;
+            opacity: 0;
+            position: absolute;
+        }
+
+        #shape4 {
+            left: 0;
+            top: 0;
+            width: 697.17px;
+            height: 566.17px;
+            opacity: 0;
+            position: absolute;
+        }
+
+        #shape5 {
+            left: 0;
+            top: 0;
+            width: 542px;
+            height: 440px;
+            opacity: 0;
+            position: absolute;
+        }
+
+        #shape6 {
+            left: 0;
+            top: 0;
+            width: 696px;
+            height: 565px;
+            opacity: 0;
+            position: absolute;
+        }
     }
-
-
-    #shape2 {
-        left: 0;
-        top: 0;
-        width: 697.17px;
-        height: 566.17px;
-        opacity:0;
-        position: absolute;
-    }
-
-
-    #shape3 {
-        left: 0;
-        top: 0;
-        width: 541.65px;
-        height: 439.87px;
-        opacity:0;
-        position: absolute;
-    }
-
-    #shape4 {
-        left: 0;
-        top: 0;
-        width: 697.17px;
-        height: 566.17px;
-        opacity:0;
-        position: absolute;
-    }
-
-    #shape5 {
-        left: 0;
-        top: 0;
-        width: 542px;
-        height: 440px;
-        opacity:0;
-        position: absolute;
-    }
-
-    #shape6 {
-        left: 0;
-        top: 0;
-        width: 696px;
-        height: 565px;
-        opacity:0;
-        position: absolute;
-    }
-
-
-
-
-
-
 
     #logo1 {
         bottom: 0px;
