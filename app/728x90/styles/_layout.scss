@@ -17,10 +17,10 @@ body {
     opacity: 0;
 
     #shapes {
-        left: 0;
-        top: 0;
-        width: $banner-width - 1;
-        height: $banner-height - 1;
+        left: 1px;
+        top: 1px;
+        width: $banner-width - 2;
+        height: $banner-height - 2;
         position: absolute;
         overflow: hidden;
 
